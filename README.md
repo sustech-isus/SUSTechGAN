@@ -19,6 +19,9 @@ SUSTechGAN is a GAN-based image generation toolkit with dual attention modules a
 - We develop multi-scale generators in SUSTechGAN to consider various scale features (e.g., big size generator for global feature and small size generator for local feature) for generating high-quality images with clear global semantic features.
 - We propose a novel loss function with an extra detection loss, adversarial loss and cycle consistency loss to guide image generation for improving object recognition of autonomous driving in adverse conditions.
 
+![image](https://github.com/sustech-isus/SUSTechGAN/assets/51916543/1ca6bc3a-66ff-4906-a334-0427d48f00b7)
+
+
 ---
 
 ### Installation
