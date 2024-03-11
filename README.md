@@ -11,6 +11,14 @@ SUSTechGAN is a GAN-based image generation toolkit with dual attention modules a
 > 
 > The paper of this work is under reviewing. The feature contained in this repository is subject to change at any time.
 
+<img width="1636" alt="image" src="https://github.com/sustech-isus/SUSTechGAN/assets/51916543/81fff57b-3876-4f78-957e-f5844548673f">
+
+**IN THIS WORK**
+
+- We design dual attention modules in SUSTechGAN to improve the local semantic feature extraction for generating driving images in adverse conditions such as rain and night. This method solves the issue that the local semantic features (e.g., vehicles) in the generated images are blurred and even approximately disappeared, and improves the object recognition of autonomous driving.
+- We develop multi-scale generators in SUSTechGAN to consider various scale features (e.g., big size generator for global feature and small size generator for local feature) for generating high-quality images with clear global semantic features.
+- We propose a novel loss function with an extra detection loss, adversarial loss and cycle consistency loss to guide image generation for improving object recognition of autonomous driving in adverse conditions.
+
 ---
 
 ### Installation
