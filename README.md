@@ -11,7 +11,8 @@ SUSTechGAN is a GAN-based image generation toolkit with dual attention modules a
 > 
 > The paper of this work is under reviewing. The feature contained in this repository is subject to change at any time.
 
-<img width="1636" alt="image" src="https://github.com/sustech-isus/SUSTechGAN/assets/51916543/81fff57b-3876-4f78-957e-f5844548673f">
+![278d4422-69e7-4013-83e4-16eed546a5cf](https://github.com/sustech-isus/SUSTechGAN/assets/51916543/62f032a3-58a5-4170-9bbd-fa0f7fc894b2)
+
 
 **IN THIS WORK**
 
