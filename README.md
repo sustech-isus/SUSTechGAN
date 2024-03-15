@@ -1,15 +1,15 @@
 # SUSTechGAN
 
-Image Generation for Object Recognition under Adverse Conditions of Autonomous Driving
+Image Generation for Object Recognition in Adverse Conditions of Autonomous Driving
 
-### Introduction
+### Abstract
 
-SUSTechGAN is a GAN-based image generation toolkit with dual attention modules and multi-scale generators to generate driving images for improving object recognition of autonomous driving in adverse conditions.
+Autonomous driving significantly benefits from data-driven deep neural networks. However, the data in autonomous driving typically fits the long-tailed distribution, in which the critical driving data in adverse conditions is hard to collect. Although generative adversarial networks (GANs) have been applied to augment data for autonomous driving, generating driving images in adverse conditions is still challenging. In this work, we propose a novel SUSTechGAN with dual attention modules and multi-scale generators to generate driving images for improving object recognition of autonomous driving in adverse conditions. We test the SUSTechGAN and the existing well-known GANs to generate driving images in adverse conditions of rain and night and apply the generated images to retrain object recognition networks. Specifically, we add generated images into the training datasets to retrain the well-known YOLOv5 and evaluate the improvement of the retrained YOLOv5 for object recognition in adverse conditions. The experimental results show that the generated driving images by our SUSTechGAN significantly improved the performance of retrained YOLOv5 in rain and night conditions, which outperforms the well-known GANs. The open-source code, video description and datasets are available on this page to facilitate image generation development in autonomous driving under adverse conditions.
 
 > [!CAUTION]
 > **NON-STABLE VERSION WARN**
 > 
-> The paper of this work is under reviewing. The feature contained in this repository is subject to change at any time.
+> This is under review. The content in this repository may be updated.
 
 ![278d4422-69e7-4013-83e4-16eed546a5cf](https://github.com/sustech-isus/SUSTechGAN/assets/51916543/62f032a3-58a5-4170-9bbd-fa0f7fc894b2)
 
@@ -17,7 +17,7 @@ SUSTechGAN is a GAN-based image generation toolkit with dual attention modules a
 **IN THIS WORK**
 
 - We design dual attention modules in SUSTechGAN to improve the local semantic feature extraction for generating driving images in adverse conditions such as rain and night. This method solves the issue that the local semantic features (e.g., vehicles) in the generated images are blurred and even approximately disappeared, and improves the object recognition of autonomous driving.
-- We develop multi-scale generators in SUSTechGAN to consider various scale features (e.g., big size generator for global feature and small size generator for local feature) for generating high-quality images with clear global semantic features.
+- We develop multi-scale generators in SUSTechGAN to consider various scale features (e.g., big size generator for global features and small-size generator for local features) for generating high-quality images with clear global semantic features.
 - We propose a novel loss function with an extra detection loss, adversarial loss and cycle consistency loss to guide image generation for improving object recognition of autonomous driving in adverse conditions.
 
 ![image](https://github.com/sustech-isus/SUSTechGAN/assets/51916543/1ca6bc3a-66ff-4906-a334-0427d48f00b7)
@@ -27,11 +27,11 @@ SUSTechGAN is a GAN-based image generation toolkit with dual attention modules a
 
 ### Installation
 
-#### STEP 1: Check system prerequesties
+#### STEP 1: Check system prerequisites
 
-Your system and environment meets at least the following prerequesties _(We mark checkbox for tested version)_
+Your system and environment meet at least the following prerequisites _(We mark the checkbox for the tested version)_
 
-- Linux based system
+- Linux-based system
   - [x] Ubuntu 18.04 LTS / Ubuntu 20.04 LTS
 - Python
   - [x] Python 3.8.10
@@ -45,7 +45,7 @@ cd ${YOUR_WORKSAPCE}
 git clone git@github.com:sustech-isus/SUSTechGAN.git
 ```
 
-#### STEP 3: Install python requirments
+#### STEP 3: Install Python requirements
 
 ```sh
 cd ${REPO_ROOT}
@@ -62,12 +62,12 @@ conda env create -f ./requirements.yml
 ### Train & Test
 
 > [!TIP]
-> Visdom is included in python package requirements, so you can use the follow commands to start a  visdom server and view results in a web page at [http://localhost:8097]()
+> Visdom is included in Python package requirements, so you can use the following commands to start a vision server and view results on a web page at [http://localhost:8097]()
 
-#### STEP 1: Get dataset
+#### STEP 1: Get the dataset
 
 > ![NOTE]
-> Our dataset for this work is under review and we will publish it here later!
+> Our dataset for this work is under review, and we will publish it here later!
 
 ```sh
 wget -q -O - "${DATASET_URL}" | tar -xzf - -C ${REPO_ROOT}/datasets/${DATASET_NAME}
@@ -87,16 +87,19 @@ cd ${REPO_ROOT}
 python test.py --dataroot ./datasets/${DATASET_NAME} --name ${DATASET_NAME} --model cyclegan
 ```
 
-You can find test result here
+You can find the test results here
 ```
 ./results/${DATASET_NAME}/latest_test/index.html
 ```
 
 ---
+### Citation
+
+Coming soon
 
 ### About
 
-This work is just one step closer to the application of GAN to autonomous driving, and we thank the community for their support on this work!
+We believe that this work is a milestone of GAN-based data generation for improving autonomous driving, and we thank the community for their support!
 
 - [CycleGAN-and-pix2pix-in-PyTorch](https://github.com/yanqi1811/CycleGAN-and-pix2pix-in-PyTorch)
 - [Pytorch-Deep Convolution GAN](https://github.com/pytorch/examples/tree/main/dcgan)
