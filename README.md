@@ -11,7 +11,7 @@ Autonomous driving significantly benefits from data-driven deep neural networks.
 > 
 > This is under review. The content in this repository may be updated.
 
-<img src="https://github.com/sustech-isus/SUSTechGAN/assets/51916543/62f032a3-58a5-4170-9bbd-fa0f7fc894b2" width="3000" height="auto" />
+<img src="https://github.com/sustech-isus/SUSTechGAN/assets/51916543/fb3b6404-cfba-4160-b917-5c5f134ee3d4" width="3000" height="auto" />
 
 
 **IN THIS WORK**
