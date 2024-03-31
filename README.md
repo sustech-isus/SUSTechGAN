@@ -69,8 +69,9 @@ conda env create -f ./requirements.yml
 
 #### STEP 1: Get the dataset
 
-> ![NOTE]
-> Our dataset for this work is under review, and we will publish it here later!
+Download the dataset from dropbox. Replace `$DATASET_URL` to
+[Rainy Dataset](https://www.dropbox.com/scl/fi/7mscbm9w9221ftu73tzvv/rainy1.zip?rlkey=ry6abwd3g7m17fpprcoxkzjek&dl=0) or
+[Sunny Dataset](https://www.dropbox.com/scl/fi/hi70ifwkyday59ayeeacb/sunny1.zip?rlkey=ljdk1qouh168dn260ilfp294q&dl=0)
 
 ```sh
 wget -q -O - "${DATASET_URL}" | tar -xzf - -C ${REPO_ROOT}/datasets/${DATASET_NAME}
